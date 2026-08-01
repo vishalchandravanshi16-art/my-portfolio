@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Blog - Thoughts on tech, student life, physics tutorials, and vlogging adventures.">
+    <title>Blog | Student Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio<span>.</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="certificates.html" class="nav-link">Certificates</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="resume.html" class="nav-link-btn">View Resume</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <section class="blog-page section-padding">
+        <div class="container">
+            <h2 class="section-title text-center scroll-reveal">My <span>Blog</span></h2>
+            <p class="section-subtitle text-center scroll-reveal">Articles on science, web design, and creative student projects</p>
+            
+            <!-- Blog Posts Grid -->
+            <div class="grid-3 project-grid section-padding">
+                
+                <!-- Blog Post 1 -->
+                <article class="card project-card scroll-reveal">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/blog-physics.jpg" alt="Wave Optics Concept Diagram">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Physics</span>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Jan 26, 2026</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3>Demystifying Wave Optics & Huygens' Principle</h3>
+                        <p>A student-friendly breakdown of wavefront propagation, secondary wavelets, and visualizing the superposition of waves without getting lost in the math.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="card project-card scroll-reveal">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/blog-vlog.jpg" alt="Video editing workspace setup">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Creative</span>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Feb 12, 2026</span>
+                            <span><i class="far fa-clock"></i> 4 min read</span>
+                        </div>
+                        <h3>The Art of Student Vlogging & Team Collaboration</h3>
+                        <p>How my friends and I plan, script, and edit high-energy video vlogs while balancing our regular college assignments and learning tracks.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="card project-card scroll-reveal">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/blog-hardware.jpg" alt="Laptop repair and diagnostic setup">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Troubleshooting</span>
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> Mar 05, 2026</span>
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <h3>Fixing Laptop Display Artifacts & Driver Glitches</h3>
+                        <p>A step-by-step diagnostic guide based on my own experience fixing safe mode display rendering problems and graphics hardware bugs.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Vishal Singh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

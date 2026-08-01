@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume | Vishal Singh</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Links Engine -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="background-color: #0b0f19; color: #f8fafc; font-family: 'Inter', sans-serif; margin: 0; padding: 0;">
+
+    <!-- Header / Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Vishal <span>Singh</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certificates.html" class="nav-link">Certifications</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="resume.html" class="download-btn nav-link active">View Resume</a>
+        </div>
+    </nav>
+
+    <!-- Resume Section -->
+    <main style="padding: 100px 20px; max-width: 900px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 2.8rem; font-weight: 800; background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px;">My Resume</h1>
+            <p style="color: #94a3b8; font-size: 1.1rem; margin-bottom: 25px;">View, print, or download my comprehensive academic and professional profile below</p>
+            
+            <!-- Action Buttons -->
+            <div style="display: flex; justify-content: center; gap: 15px;">
+                <button onclick="window.print()" style="background: #3b82f6; color: white; border: none; padding: 12px 24px; font-size: 0.95rem; font-weight: 600; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: background 0.2s;">
+                    <i class="fas fa-print"></i> Print Version
+                </button>
+            </div>
+        </div>
+
+        <!-- Resume Card Sheet -->
+        <div id="resume-sheet" style="background: rgba(15, 23, 42, 0.45); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 45px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+            
+            <!-- Header Info Component WITH PHOTO -->
+            <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 25px; margin-bottom: 30px; display: flex; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap-reverse; gap: 20px;">
+                
+                <div>
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin: 0 0 5px 0;">Vishal Singh</h2>
+                    <p style="font-size: 1.2rem; color: #38bdf8; margin: 0 0 15px 0; font-weight: 500;">Computer Science Student & Front-End Developer</p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; color: #94a3b8; font-size: 0.95rem;">
+                        <span><i class="fas fa-envelope" style="color: #3b82f6; margin-right: 6px;"></i> vishalchandravanshi16@gmail.com</span>
+                        <span><i class="fas fa-map-marker-alt" style="color: #ef4444; margin-right: 6px;"></i> Bihar, India</span>
+                        <span><i class="fab fa-github" style="color: #ffffff; margin-right: 6px;"></i> github.com</span>
+                    </div>
+                </div>
+
+                <!-- Profile Photo Section -->
+                <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; border: 3px solid rgba(56, 189, 248, 0.4); box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+                    <img src="profile.png" alt="Vishal Singh Profile Photo" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+
+            </div>
+
+            <!-- Experience / Internships -->
+            <div style="margin-bottom: 35px;">
+                <h3 style="font-size: 1.3rem; color: #ffffff; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-briefcase" style="color: #06b6d4;"></i> Work & Internship Experience
+                </h3>
+                <div style="padding-left: 15px; border-left: 2px solid rgba(6, 182, 212, 0.3);">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                        <h4 style="font-size: 1.1rem; color: #f8fafc; margin: 0; font-weight: 600;">Web Development Intern</h4>
+                        <span style="font-size: 0.9rem; color: #94a3b8;">Dec 2025 - Jan 2026</span>
+                    </div>
+                    <p style="color: #38bdf8; font-size: 0.95rem; margin: 4px 0 10px 0;">Ezyintern | Sityog Institute of Technology</p>
+                    <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5; margin: 0;">
+                        Successfully completed a 2-week offline internship training. Gained practical experience in responsive layouts, front-end optimization, and building user-centric interfaces.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div style="margin-bottom: 35px;">
+                <h3 style="font-size: 1.3rem; color: #ffffff; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-graduation-cap" style="color: #3b82f6;"></i> Education
+                </h3>
+                
+                <div style="display: flex; flex-direction: column; gap: 20px; padding-left: 15px; border-left: 2px solid rgba(59, 130, 246, 0.3);">
+                    <!-- College -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                            <h4 style="font-size: 1.1rem; color: #f8fafc; margin: 0; font-weight: 600;">B.Tech in Computer Science</h4>
+                            <span style="font-size: 0.9rem; color: #94a3b8;">2024 - Present</span>
+                        </div>
+                        <p style="color: #94a3b8; font-size: 0.95rem; margin: 4px 0 0 0;">University Department of Information Technology</p>
+                        <p style="color: #64748b; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.4;">Deep foundational studies in Data Structures, Wave Optics, Mathematical Analysis, and Client-Side Scripting Implementations.</p>
+                    </div>
+                    
+                    <!-- School -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                            <h4 style="font-size: 1.1rem; color: #f8fafc; margin: 0; font-weight: 600;">Higher Secondary Certificate (PCM)</h4>
+                            <span style="font-size: 0.9rem; color: #94a3b8;">2022 - 2024</span>
+                        </div>
+                        <p style="color: #94a3b8; font-size: 0.95rem; margin: 4px 0 0 0;">Senior Secondary Academy</p>
+                        <p style="color: #64748b; font-size: 0.9rem; margin: 5px 0 0 0; line-height: 1.4;">Graduated with strong distinctions in scientific experiments, numerical analytics, and programmatic lab assignments.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Projects -->
+            <div style="margin-bottom: 35px;">
+                <h3 style="font-size: 1.3rem; color: #ffffff; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-project-diagram" style="color: #a855f7;"></i> Key Academic Projects
+                </h3>
+                
+                <div style="display: flex; flex-direction: column; gap: 20px; padding-left: 15px; border-left: 2px solid rgba(168, 85, 247, 0.3);">
+                    <!-- Project 1 -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                            <h4 style="font-size: 1.1rem; color: #f8fafc; margin: 0; font-weight: 600;">Kinetic Physics Sandbox Engine</h4>
+                            <span style="font-size: 0.9rem; color: #94a3b8;">2026</span>
+                        </div>
+                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5; margin: 5px 0 0 0;">Built a full 2D vector environment using Canvas to let students study wave behaviors, particle drag coefficients, and elastic energy bounds dynamically.</p>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                            <h4 style="font-size: 1.1rem; color: #f8fafc; margin: 0; font-weight: 600;">Local Retail Management Platform</h4>
+                            <span style="font-size: 0.9rem; color: #94a3b8;">2025</span>
+                        </div>
+                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.5; margin: 5px 0 0 0;">Engineered an inventory tracker utilizing lightweight data models and custom storage frameworks to organize multi-tier item catalogs easily.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two Column Grid for Skills & Interests -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                
+                <!-- Skills -->
+                <div>
+                    <h3 style="font-size: 1.2rem; color: #ffffff; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-tools" style="color: #10b981;"></i> Core Skills
+                    </h3>
+                    <ul style="margin: 0; padding-left: 20px; color: #94a3b8; line-height: 1.8; font-size: 0.95rem;">
+                        <li>HTML5 / CSS Variables</li>
+                        <li>JavaScript (ES6 Structures)</li>
+                        <li>JSON Data Layouts</li>
+                        <li>Responsive UI Optimization</li>
+                        <li>Git & Collaborative Coding</li>
+                    </ul>
+                </div>
+
+                <!-- Languages & Interests -->
+                <div>
+                    <h3 style="font-size: 1.2rem; color: #ffffff; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-language" style="color: #f59e0b;"></i> Languages
+                    </h3>
+                    <ul style="margin: 0 0 20px 0; padding-left: 20px; color: #94a3b8; line-height: 1.8; font-size: 0.95rem;">
+                        <li>English (Professional)</li>
+                        <li>Hindi (Native)</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.2rem; color: #ffffff; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-heart" style="color: #ec4899;"></i> Creative Interests
+                    </h3>
+                    <p style="color: #94a3b8; margin: 0; font-size: 0.95rem; line-height: 1.5;">
+                        Multimedia Content Creation, Video Asset Editing, Technical Hardware Diagnostics, Digital Design Layouts.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer System -->
+    <footer class="main-footer" style="padding: 30px 20px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+        <p style="color: #64748b; font-size: 0.9rem;">&copy; 2026 Vishal Singh. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

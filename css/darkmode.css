@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Professional Student Portfolio - Dark Mode Theme Overrides
+   ========================================================================== */
+
+/* Dark Theme Variables Applied globally when data-theme attribute matches */
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #1e293b;
+    --bg-navbar: rgba(15, 23, 42, 0.8);
+    
+    --text-primary: #94a3b8;
+    --text-secondary: #cbd5e1;
+    --text-title: #f8fafc;
+    
+    --border-color: #334155;
+    
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+}
+
+/* Specific component tweaks for premium readability in Dark Mode */
+[data-theme="dark"] .project-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
+}
+
+[data-theme="dark"] .timeline::after {
+    background-color: var(--border-color);
+}
+
+[data-theme="dark"] .timeline-item::after {
+    background-color: var(--bg-secondary);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .form-group input:focus, 
+[data-theme="dark"] .form-group textarea:focus {
+    background-color: #0f172a;
+}
+
+[data-theme="dark"] .resume-paper {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    box-shadow: var(--shadow-lg);
+}

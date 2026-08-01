@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Vishal Singh</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Links Engine -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Rainbow Rotating Light Magic CSS -->
+    <style>
+        .about-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        /* Rainbow Color Ring Container */
+        .rainbow-avatar-wrapper {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Dynamic Rotating Colorful Borders */
+        .rainbow-avatar-wrapper::before,
+        .rainbow-avatar-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00f2ff, #00ff88, #ff007f, #7928ca, #3b82f6, #00f2ff);
+            background-size: 400%;
+            z-index: 1;
+            animation: rainbowGlow 8s linear infinite;
+        }
+
+        .rainbow-avatar-wrapper::after {
+            filter: blur(15px);
+            opacity: 0.7;
+        }
+
+        /* Fixed Image Frame inside the ring */
+        .avatar-core-frame {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: #0b0f19;
+            border-radius: 50%;
+            z-index: 5;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid #0b0f19;
+        }
+
+        .avatar-core-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        @keyframes rainbowGlow {
+            0% { background-position: 0% 50%; transform: rotate(0deg); }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; transform: rotate(360deg); }
+        }
+
+        /* Professional Education Timeline UI */
+        .edu-timeline-box {
+            margin-top: 60px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px dashed rgba(6, 182, 212, 0.3);
+        }
+
+        .timeline-node {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 20px;
+        }
+
+        .timeline-node::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #06b6d4;
+            border: 4px solid #0b0f19;
+            box-shadow: 0 0 10px #06b6d4;
+        }
+
+        .node-meta {
+            font-size: 0.9rem;
+            color: #06b6d4;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+
+        .node-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 5px 0;
+        }
+
+        .node-location {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        .node-desc {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .tag-badge {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.1);
+            color: #06b6d4;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .about-grid-layout { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Vishal <span>Singh</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="certificates.html" class="nav-link">Certifications</a></li>
+                <li><a href="blog.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="resume.html" class="download-btn">View Resume <i class="fas fa-file-pdf"></i></a>
+        </div>
+    </nav>
+
+    <!-- Main Content Grid -->
+    <main class="container" style="padding-top: 120px; padding-bottom: 60px;">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <p style="color: #06b6d4; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;">My introduction, educational journey, and skills</p>
+        </div>
+
+        <div class="about-grid-layout">
+            
+            <!-- LEFT COLUMN: PHOTO WITH RAINBOW ROTATING LIGHTS -->
+            <div class="rainbow-avatar-wrapper">
+                <div class="avatar-core-frame">
+                    <!-- Aapki image file ka path aur profile photo frame -->
+                    <img src="profile.png" alt="Vishal Singh">
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: WHO I AM CONTENT -->
+            <div class="who-i-am-content">
+                <h2 style="font-size: 2rem; font-weight: 800; color: #3b82f6; margin-bottom: 15px;">Who I am</h2>
+                <p style="line-height: 1.7; color: #cbd5e1; margin-bottom: 15px;">
+                    I am a dedicated computer science engineering student with a deep focus on technology and software development. My journey is driven by a strong interest in understanding complex systems and converting logical problems into scalable, user-centric tech solutions.
+                </p>
+                <p style="line-height: 1.7; color: #cbd5e1; margin-bottom: 25px;">
+                    Currently exploring the world of AI/ML alongside full-stack core foundations, I follow structured workflows to ensure efficient codebase management. When I'm not programming or handling engineering architectures, I actively engage in video vlogging and creating digital content with my creative peers.
+                </p>
+
+                <!-- Profile Short Meta Information -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                    <div><strong>Name:</strong> <span style="color: #94a3b8;">Vishal Singh</span></div>
+                    <div><strong>Email:</strong> <span style="color: #94a3b8;">vishalchandravanshi16@gmail.com</span></div>
+                    <div><strong>Education:</strong> <span style="color: #94a3b8;">B.Tech CSE Student</span></div>
+                    <div><strong>Employment:</strong> <span style="color: #94a3b8;">Available for Internships</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- EDUCATION TIMELINE BLOCK -->
+        <section style="margin-top: 80px;">
+            <h2 style="font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 10px;">Education & Journey</h2>
+            
+            <div class="edu-timeline-box">
+
+                <!-- B.TECH NODE -->
+                <div class="timeline-node">
+                    <div class="node-meta">2024 - PRESENT</div>
+                    <div class="node-title">Bachelor of Technology (B.Tech) — Computer Science & Engineering</div>
+                    <div class="node-location"><i class="fas fa-university"></i> Sityog Institute of Technology, Aurangabad, Bihar (824101) <span style="color: #64748b;">| Near Jasoiya Mod</span></div>
+                    <p class="node-desc">
+                        Pursuing advanced knowledge in computing paradigms, algorithms, and engineering logic. Our academic roadmap operates strictly aligned with the **Bihar Engineering University (BEU), Patna** syllabus parameters, introducing structural frameworks across modern database design and system analytics.
+                    </p>
+                    <span class="tag-badge">BEU Affiliated Institution</span>
+                </div>
+
+                <!-- 12TH NODE -->
+                <div class="timeline-node">
+                    <div class="node-meta">2022 - 2024</div>
+                    <div class="node-title">Higher Secondary Schooling (12th Standard — Science)</div>
+                    <div class="node-location"><i class="fas fa-school"></i> +2 H/S Ekwari, Bhojpur, Bihar</div>
+                    <p class="node-desc">
+                        Completed senior secondary education under the **Bihar School Examination Board (BSEB), Patna**, concentrating heavily on Physics, Chemistry, and Mathematics (PCM matrices). Developed foundational problem-solving abilities and experimental logic.
+                    </p>
+                    <span class="tag-badge">BSEB Board</span>
+                </div>
+
+                <!-- 10TH NODE -->
+                <div class="timeline-node">
+                    <div class="node-meta">Graduated: 2022</div>
+                    <div class="node-title">Secondary School Certificate (10th Standard)</div>
+                    <div class="node-location"><i class="fas fa-graduation-cap"></i> Utkramit M.S. Nawada Baruhi, Bhojpur, Bihar</div>
+                    <p class="node-desc">
+                        Acquired primary analytics and school certification via **BSEB Patna**, securing an aggregate evaluation record score of **284 Marks**. Formed the baseline discipline towards scientific domains.
+                    </p>
+                    <span class="tag-badge">BSEB Matriculation</span>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-flex">
+            <p>&copy; 2026 Vishal Singh. All rights reserved.</p>
+            <p>Built with <span style="color: #ef4444;">&hearts;</span> and Engineering Logic</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

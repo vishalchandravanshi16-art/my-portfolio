@@ -1,0 +1,8 @@
+# www.robotstxt.org/
+
+# Allow all search engines to index the student portfolio website
+User-agent: *
+Allow: /
+
+# Sitemaps locations for crawling engines
+Sitemap: https://yourusername.github.io/Student-Portfolio/sitemap.xml

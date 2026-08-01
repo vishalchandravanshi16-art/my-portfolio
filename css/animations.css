@@ -1,0 +1,164 @@
+/* ==========================================================================
+   Professional Student Portfolio - Smooth Animations & Keyframes
+   ========================================================================== */
+
+/* Preloader Spinner Animation */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--border-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Base Fade-In Effect */
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typing Effect Caret Blinking */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: var(--text-title);
+    margin-left: 2px;
+    animation: blink 0.6s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { background-color: transparent }
+    50% { background-color: var(--text-title); }
+}
+
+/* Scroll-Driven Entry Transitions (Controlled via intersection.js/animation.js) */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Blob Floating Distortion Interaction */
+.hero-blob {
+    animation: morph 8s ease-in-out infinite alternate;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    }
+    100% {
+        border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%;
+    }
+}
+/* ==========================================================================
+   INTERACTIVE NEON PROFILE ENGINE (STRICTLY STATIC CENTER)
+   ========================================================================== */
+
+/* 1. Slow, Medium & Fast Ring Rotation */
+@keyframes spinClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes energyPulse {
+  0% { transform: scale(0.95); opacity: 0; }
+  50% { opacity: 0.3; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+/* 2. Orbiting Neon Dots (GPU Accelerated) */
+@keyframes orbitCyan {
+  0% { transform: rotate(0deg) translate3d(140px, 0, 0) rotate(0deg); }
+  100% { transform: rotate(360deg) translate3d(140px, 0, 0) rotate(-360deg); }
+}
+@keyframes orbitBlue {
+  0% { transform: rotate(120deg) translate3d(160px, 0, 0) rotate(-120deg); }
+  100% { transform: rotate(480deg) translate3d(160px, 0, 0) rotate(-480deg); }
+}
+@keyframes orbitPurple {
+  0% { transform: rotate(240deg) translate3d(175px, 0, 0) rotate(-240deg); }
+  100% { transform: rotate(600deg) translate3d(175px, 0, 0) rotate(-600deg); }
+}
+
+/* Base Wrapper Matrix */
+.interactive-hud-wrapper {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Ring Base Layout */
+.hud-ring-layer {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ring-fast { animation: spinClockwise 14s linear infinite; }
+.ring-slow { animation: spinCounterClockwise 25s linear infinite; }
+.ring-medium { animation: spinClockwise 18s linear infinite; }
+.ring-pulse-1 { animation: energyPulse 4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite; }
+.ring-pulse-2 { animation: energyPulse 4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite; animation-delay: 2s; }
+
+.dot-cyan { animation: orbitCyan 12s linear infinite; }
+.dot-blue { animation: orbitBlue 16s linear infinite; }
+.dot-purple { animation: orbitPurple 20s linear infinite; }
+
+/* 100% LOCKED AND STATIC PROFILE PICTURE CONTAINER */
+.profile-locked-center {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  padding: 6px;
+  background: #0d152e;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 30;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.6), 0 0 30px rgba(6, 182, 212, 0.15);
+  transform: none !important;
+  animation: none !important;
+}
+
+.profile-locked-center img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: none !important;
+  animation: none !important;
+  user-select: none;
+}
