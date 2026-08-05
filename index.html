@@ -11,13 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- CSS -->
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 
-    <!-- PRELOADER -->
+    <!-- SYSTEM LOADER -->
     <div id="welcome-loader">
         <div class="loader-content">
             <div class="tech-spinner"></div>
@@ -25,18 +25,29 @@
         </div>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR WITH MOBILE TOGGLE -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">&lt;Vishal<span>Singh /&gt;</span></a>
-            <ul class="nav-menu">
+            
+            <!-- Mobile Menu Hamburger Button -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="certificates.html" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="mobile-resume-item">
+                    <a href="Resume.png" download="Vishal_Singh_Resume.png" class="download-btn"><i class="fas fa-terminal"></i> Resume</a>
+                </li>
             </ul>
-            <a href="Resume.png" download="Vishal_Singh_Resume.png" class="download-btn"><i class="fas fa-terminal"></i> Resume</a>
+            
+            <a href="Resume.png" download="Vishal_Singh_Resume.png" class="download-btn desktop-resume-btn"><i class="fas fa-terminal"></i> Resume</a>
         </div>
     </nav>
 
@@ -45,10 +56,10 @@
         <div class="container hero-grid">
             <div class="hero-content">
                 <div class="status-badge"><span class="pulse-dot"></span> System Online | AI & Web Developer</div>
-                <h1 class="hero-title">Engineering <span>Digital Intelligence</span></h1>
-                <h3 class="hero-tagline">&gt; B.Tech CSE Student & Tech Innovator</h3>
+                <h1 class="hero-title">VISHAL<span> SINGH</span></h1>
+                <h3 class="hero-tagline">&gt; B.Tech CSE Student </h3>
                 <p class="hero-desc">
-                    Specializing in robust web systems, modern user interfaces, and smart algorithms. Passionate about cyber aesthetics and building high-performance tech applications.
+                    I'm Vishal Singh, a B.Tech CSE student passionate about AI, Web Development, and Problem Solving. I enjoy building modern web applications, exploring new technologies, and creating innovative solutions through code
                 </p>
                 <div class="hero-buttons">
                     <a href="projects.html" class="btn btn-primary"><i class="fas fa-project-diagram"></i> Explore Projects</a>
@@ -75,27 +86,39 @@
         </div>
     </section>
 
-    <!-- METRICS GRID -->
-    <section class="metrics-section">
-        <div class="container metrics-grid">
-            <div class="metric-card">
-                <i class="fas fa-code-branch icon-glow"></i>
-                <div><h3>10+</h3><p>Projects Built</p></div>
+   <!-- METRICS GRID (CLICKABLE CARDS) -->
+<section class="metrics-section">
+    <div class="container metrics-grid">
+        <a href="projects.html" class="metric-card">
+            <i class="fas fa-code-branch icon-glow"></i>
+            <div>
+                <h3>10+</h3>
+                <p>Projects Built</p>
             </div>
-            <div class="metric-card">
-                <i class="fas fa-certificate icon-glow"></i>
-                <div><h3>3+</h3><p>Certifications</p></div>
+        </a>
+        <a href="certificates.html" class="metric-card">
+            <i class="fas fa-certificate icon-glow"></i>
+            <div>
+                <h3>3+</h3>
+                <p>Certifications</p>
             </div>
-            <div class="metric-card">
-                <i class="fas fa-cpu icon-glow"></i>
-                <div><h3>5+</h3><p>Tech Stack</p></div>
+        </a>
+        <a href="about.html" class="metric-card">
+            <i class="fas fa-cpu icon-glow"></i>
+            <div>
+                <h3>5+</h3>
+                <p>Tech Stack</p>
             </div>
-            <div class="metric-card">
-                <i class="fas fa-shield-halved icon-glow"></i>
-                <div><h3>100%</h3><p>Security & Speed</p></div>
+        </a>
+        <a href="#contact" class="metric-card">
+            <i class="fas fa-shield-halved icon-glow"></i>
+            <div>
+                <h3>100%</h3>
+                <p>Security & Speed</p>
             </div>
-        </div>
-    </section>
+        </a>
+    </div>
+</section>
 
     <!-- MAIN INFO GRID (About & What I Do) -->
     <section class="main-info-section">
@@ -106,7 +129,7 @@
                     <i class="fas fa-user-astronaut"></i>
                     <h2>About Me</h2>
                 </div>
-                <p class="card-desc">Computer Science undergraduate dedicated to software craftsmanship, algorithmic problem solving, and modern web architectures.</p>
+                <p class="card-desc">I'm Vishal Singh, a B.Tech CSE student passionate about Artificial Intelligence, Web Development, and Software Engineering. I love building modern web applications, solving programming problems, and continuously learning new technologies to become a better developer</p>
                 <ul class="tech-info-list">
                     <li><i class="fas fa-terminal"></i> <strong>Name:</strong> Vishal Singh</li>
                     <li><i class="fas fa-graduation-cap"></i> <strong>Degree:</strong> B.Tech CSE</li>
@@ -171,33 +194,65 @@
                 </div>
 
                 <div class="cyber-card">
-                    <form action="https://formspree.io/f/mykrakek" method="POST" class="cyber-form">
-                        <div class="input-field">
-                            <input type="text" name="name" required placeholder="Your Name">
-                        </div>
-                        <div class="input-field">
-                            <input type="email" name="email" required placeholder="Your Email">
-                        </div>
-                        <div class="input-field">
-                            <textarea name="message" rows="4" required placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Transmit Message</button>
-                    </form>
-                </div>
-            </div>
+    <form action="https://formspree.io/f/mykrakek" method="POST" class="cyber-form">
+        <div class="input-field">
+            <input type="text" name="name" required placeholder="Your Name">
         </div>
+        <div class="input-field">
+            <input type="email" name="email" required placeholder="Your Email">
+        </div>
+        <!-- Naya Subject Field -->
+        <div class="input-field">
+            <input type="text" name="_subject" required placeholder="Subject">
+        </div>
+        <div class="input-field">
+            <textarea name="message" rows="4" required placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Transmit Message</button>
+    </form>
+</div>
     </section>
 
-    <!-- JS Loader -->
+    <!-- SCRIPTS FOR LOADER & MOBILE MENU -->
     <script>
+        // System Loader Auto Hide
         window.addEventListener('load', () => {
             const loader = document.getElementById('welcome-loader');
             setTimeout(() => {
                 loader.style.opacity = '0';
                 loader.style.visibility = 'hidden';
                 setTimeout(() => loader.style.display = 'none', 600);
-            }, 1200);
+            }, 1000);
         });
+
+        // Mobile Navigation Toggle Logic
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = navToggle.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    const icon = navToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+        }
     </script>
 </body>
 </html>
