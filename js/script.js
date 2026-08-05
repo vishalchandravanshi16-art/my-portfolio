@@ -1,6 +1,15 @@
 /* ==========================================================================
    Professional Student Portfolio - Core Structural Logic & Navigation
    ========================================================================== */
+   // Preloader Loader Function
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('welcome-loader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+        }, 1500); // 1.5 Seconds me auto hide hoga
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();

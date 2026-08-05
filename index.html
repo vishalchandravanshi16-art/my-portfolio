@@ -1,244 +1,158 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishal Singh Portfolio</title>
+    <title>Vishal Singh | Cyber-Tech Portfolio</title>
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- CSS Links Engine -->
-    <link rel="stylesheet" href="css/variables.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/darkmode.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-    <!-- WELCOME PRELOADER -->
+    <!-- PRELOADER -->
     <div id="welcome-loader">
-        <h1>Hello, Welcome to <span>My Portfolio</span></h1>
+        <div class="loader-content">
+            <div class="tech-spinner"></div>
+            <h1>SYSTEM LOADING: <span>VISHAL SINGH</span></h1>
+        </div>
     </div>
 
-    <!-- Header / Navbar -->
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Vishal <span>Singh</span></a>
-            <ul class="nav-menu" id="nav-menu">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">&lt;Vishal<span>Singh /&gt;</span></a>
+            <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="certificates.html" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <a href="Resume.png" download="Vishal_Singh_Resume.png" class="download-btn">Download Resume <i class="fas fa-download"></i></a>
+            <a href="Resume.png" download="Vishal_Singh_Resume.png" class="download-btn"><i class="fas fa-terminal"></i> Resume</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <section class="hero-section">
         <div class="container hero-grid">
-            
-            <!-- LEFT SIDE CONTENT BLOCK -->
             <div class="hero-content">
-                <span class="subtitle">Hi, I'm</span>
-                <h1 class="hero-title">Vishal <span>Singh</span></h1>
-                <h3 class="hero-tagline">B.Tech CSE Student | Aspiring AI Engineer</h3>
+                <div class="status-badge"><span class="pulse-dot"></span> System Online | AI & Web Developer</div>
+                <h1 class="hero-title">Engineering <span>Digital Intelligence</span></h1>
+                <h3 class="hero-tagline">&gt; B.Tech CSE Student & Tech Innovator</h3>
                 <p class="hero-desc">
-                    I build intelligent, scalable and user-centric web applications with modern technologies. Passionate about solving real-world problems using AI and full stack development.
+                    Specializing in robust web systems, modern user interfaces, and smart algorithms. Passionate about cyber aesthetics and building high-performance tech applications.
                 </p>
                 <div class="hero-buttons">
-                    <a href="projects.html" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn btn-outline">Get In Touch <i class="far fa-comment-dots"></i></a>
+                    <a href="projects.html" class="btn btn-primary"><i class="fas fa-project-diagram"></i> Explore Projects</a>
+                    <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Contact Me</a>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/vishalchandravanshi16-art"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/vishal-singh-019457370/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://leetcode.com/u/Vishal_Singh_ar1/"><i class="fas fa-code"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/vishalchandravanshi16-art" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/vishal-singh-019457370/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://leetcode.com/u/Vishal_Singh_ar1/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
                 </div>
             </div>
 
-            <!-- RIGHT SIDE: INTERACTIVE ANIMATED PROFILE ELEMENT -->
+            <!-- CYBER HUD ROTATING PROFILE PHOTO -->
             <div class="hero-image-box">
-                <div class="interactive-hud-wrapper">
-                    <div class="hud-ring-layer ring-pulse-1"></div>
-                    <div class="hud-ring-layer ring-pulse-2"></div>
-                    <div class="hud-ring-layer ring-fast"></div>
-                    <div class="hud-ring-layer ring-slow"></div>
-                    <div class="hud-ring-layer ring-medium"></div>
-
-                    <!-- Orbiting Dots Network -->
-                    <div class="dots-container">
-                        <div class="dot-cyan"></div>
-                        <div class="dot-blue"></div>
-                        <div class="dot-purple"></div>
-                    </div>
-
-                    <!-- CENTER PHOTO -->
-                    <div class="profile-locked-center">
-                        <img src="profile.png" alt="Vishal Singh" draggable="false">
+                <div class="hud-wrapper">
+                    <div class="ring ring-outer"></div>
+                    <div class="ring ring-middle"></div>
+                    <div class="ring ring-inner"></div>
+                    <div class="profile-box">
+                        <img src="profile.png" alt="Vishal Singh">
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-   <!-- Counter Metrics Grid -->
+    <!-- METRICS GRID -->
     <section class="metrics-section">
         <div class="container metrics-grid">
-            <a href="projects.html" class="metric-card">
-                <i class="fas fa-code-branch icon-blue"></i>
-                <div class="metric-info"><h3>10+</h3><p>Projects Completed</p></div>
-            </a>
-            <a href="certificates.html" class="metric-card">
-                <i class="fas fa-award icon-blue"></i>
-                <div class="metric-info"><h3>3+</h3><p>Certifications</p></div>
-            </a>
-            <a href="#skills" class="metric-card">
-                <i class="fas fa-laptop-code icon-blue"></i>
-                <div class="metric-info"><h3>5+</h3><p>Technologies</p></div>
-            </a>
-            <a href="#contact" class="metric-card">
-                <i class="fas fa-user-check icon-blue"></i>
-                <div class="metric-info"><h3>100%</h3><p>Dedication</p></div>
-            </a>
+            <div class="metric-card">
+                <i class="fas fa-code-branch icon-glow"></i>
+                <div><h3>10+</h3><p>Projects Built</p></div>
+            </div>
+            <div class="metric-card">
+                <i class="fas fa-certificate icon-glow"></i>
+                <div><h3>3+</h3><p>Certifications</p></div>
+            </div>
+            <div class="metric-card">
+                <i class="fas fa-cpu icon-glow"></i>
+                <div><h3>5+</h3><p>Tech Stack</p></div>
+            </div>
+            <div class="metric-card">
+                <i class="fas fa-shield-halved icon-glow"></i>
+                <div><h3>100%</h3><p>Security & Speed</p></div>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content Dual-Grid (About Me & What I Do) -->
+    <!-- MAIN INFO GRID (About & What I Do) -->
     <section class="main-info-section">
         <div class="container core-grid">
-            <!-- Left Card: About Me Summary -->
-            <div class="about-summary-card">
-                <div class="card-header">
-                    <i class="fas fa-user-circle"></i> <h2>About Me</h2>
+            
+            <div class="cyber-card">
+                <div class="card-title">
+                    <i class="fas fa-user-astronaut"></i>
+                    <h2>About Me</h2>
                 </div>
-                <p>I'm a B.Tech Computer Science Engineering student who loves building things that live on the internet. I enjoy turning complex problems into simple, beautiful and intuitive solutions.</p>
-                <ul class="info-list">
-                    <li><i class="fas fa-user"></i> <span>Name:</span> Vishal Singh</li>
-                    <li><i class="fas fa-calendar-alt"></i> <span>Age:</span> 20</li>
-                    <li><i class="fas fa-graduation-cap"></i> <span>Degree:</span> B.Tech CSE</li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span>Location:</span> India</li>
-                    <li><i class="fas fa-envelope"></i> <span>Email:</span> vishalchandravanshi16@gmail.com</li>
+                <p class="card-desc">Computer Science undergraduate dedicated to software craftsmanship, algorithmic problem solving, and modern web architectures.</p>
+                <ul class="tech-info-list">
+                    <li><i class="fas fa-terminal"></i> <strong>Name:</strong> Vishal Singh</li>
+                    <li><i class="fas fa-graduation-cap"></i> <strong>Degree:</strong> B.Tech CSE</li>
+                    <li><i class="fas fa-map-marker-alt"></i> <strong>Base:</strong> Bihar, India</li>
+                    <li><i class="fas fa-envelope"></i> <strong>Email:</strong> vishalchandravanshi16@gmail.com</li>
                 </ul>
-                <a href="about.html" class="btn btn-primary small-btn">Know More About Me <i class="fas fa-arrow-right"></i></a>
+                <a href="about.html" class="btn btn-primary btn-full"><i class="fas fa-user-gear"></i> Full Profile</a>
             </div>
 
-           <!-- Right Card: What I Do -->
-            <div class="what-i-do-box">
-                <h2 class="section-heading text-center">What I Do</h2>
-                <div class="services-grid">
-                    <div class="service-item" onclick="window.location.href='projects.html';">
-                        <i class="fas fa-code"></i>
-                        <div>
-                            <h4>Web Development</h4>
-                            <p>Building responsive and modern websites using HTML, CSS, JavaScript and more.</p>
+            <div class="cyber-card">
+                <div class="card-title">
+                    <i class="fas fa-cubes"></i>
+                    <h2>What I Do</h2>
+                </div>
+                <div class="services-list">
+                    <div class="service-box">
+                        <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="service-text">
+                            <h4>Full Stack & Web Architecture</h4>
+                            <p>Designing responsive, high-speed, and secure web environments tailored for seamless user interaction.</p>
                         </div>
                     </div>
-                    <div class="service-item" onclick="window.location.href='projects.html';">
-                        <i class="fas fa-brain"></i>
-                        <div>
-                            <h4>AI & Machine Learning</h4>
-                            <p>Exploring AI/ML concepts and building intelligent applications.</p>
-                        </div>
-                    </div>
-                    <div class="service-item" onclick="window.location.href='#skills';">
-                        <i class="fas fa-cubes"></i>
-                        <div>
-                            <h4>Problem Solving</h4>
-                            <p>Solving real-world problems on platforms like LeetCode and Codeforces.</p>
-                        </div>
-                    </div>
-                    <div class="service-item" onclick="window.location.href='#skills';">
-                        <i class="fas fa-database"></i>
-                        <div>
-                            <h4>Database Management</h4>
-                            <p>Working with SQL, MySQL and designing efficient database systems.</p>
+                    <div class="service-box">
+                        <div class="service-icon"><i class="fas fa-brain"></i></div>
+                        <div class="service-text">
+                            <h4>AI & Algorithm Engineering</h4>
+                            <p>Implementing data-driven models, automation workflows, and intelligent computational systems.</p>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- MY SKILLS SECTION -->
-    <section id="skills" class="skills-section">
+    <!-- SKILLS SECTION -->
+    <section class="skills-section">
         <div class="container text-center">
-            <h2 class="section-title">
-                My Skills
-                <span class="title-line"></span>
-            </h2>
-
+            <h2 class="section-title">&lt; Tech Skills /&gt;</h2>
             <div class="skills-grid">
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><span>HTML</span></div>
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><span>CSS</span></div>
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"><span>C++</span></div>
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git & GitHub</span></div>
-                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"><span>VS Code</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURED PROJECTS SECTION -->
-    <section id="projects" class="projects-section">
-        <div class="container text-center">
-            <h2 class="section-title">
-                Featured Projects
-                <span class="title-line"></span>
-            </h2>
-
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div>
-                        <h3>AI Chat Assistant</h3>
-                        <p>Smart AI chatbot built with Python, Flask and integrated with OpenAI API.</p>
-                    </div>
-                    <div class="project-footer">
-                        <span class="tag tag-cyan">Python</span>
-                        <a href="#">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div>
-                        <h3>Portfolio Website</h3>
-                        <p>A personal portfolio website to showcase my projects and skills.</p>
-                    </div>
-                    <div class="project-footer">
-                        <div class="tags-group">
-                            <span class="tag tag-red">HTML</span>
-                            <span class="tag tag-blue">CSS</span>
-                            <span class="tag tag-yellow">JS</span>
-                        </div>
-                        <a href="#">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div>
-                        <h3>E-Commerce Website</h3>
-                        <p>Full stack e-commerce website with cart, payment and admin panel.</p>
-                    </div>
-                    <div class="project-footer">
-                        <div class="tags-group">
-                            <span class="tag tag-red">HTML</span>
-                            <span class="tag tag-blue">CSS</span>
-                            <span class="tag tag-yellow">JS</span>
-                        </div>
-                        <a href="#">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+                <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"> HTML5</div>
+                <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"> CSS3</div>
+                <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS"> JavaScript</div>
+                <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</div>
+                <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"> C++</div>
+                <div class="skill-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"> MySQL</div>
             </div>
         </div>
     </section>
@@ -246,92 +160,44 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <div class="contact-header text-center">
-                <a href="#portfolioContactForm" class="badge-link"><i class="fas fa-phone-alt"></i> Let's Connect</a>
-                <h2>Get In Touch</h2>
-                <p>Have an interesting project, internship opportunity, or just want to say hi?</p>
-            </div>
-
-            <div class="contact-container">
-                <!-- LEFT CARD: CONTACT INFO -->
-                <div class="contact-info-card">
-                    <div>
-                        <h3>Contact Information</h3>
-                        <p class="subtitle-text">Feel free to reach out via email or connect with me directly on social channels.</p>
-                        
-                        <div class="info-items">
-                            <div class="info-item">
-                                <div class="icon-circle cyan"><i class="fas fa-user"></i></div>
-                                <div>
-                                    <span class="label">Developer</span>
-                                    <span class="val">Vishal Singh</span>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <div class="icon-circle blue"><i class="fas fa-envelope"></i></div>
-                                <div>
-                                    <span class="label">Email Me</span>
-                                    <a href="mailto:vishalchandravanshi16@gmail.com" class="val-link">vishalchandravanshi16@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <div class="icon-circle purple"><i class="fas fa-phone"></i></div>
-                                <div>
-                                    <span class="label">Phone</span>
-                                    <a href="tel:+919693088257" class="val-link">+91-9693088257</a>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <div class="icon-circle pink"><i class="fas fa-map-marker-alt"></i></div>
-                                <div>
-                                    <span class="label">Location</span>
-                                    <span class="val">Ara (Bhojpur), Bihar, India</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="status-indicator">
-                            <span class="dot"></span> Active for Freelance
-                        </div>
-                        <div class="social-circles">
-                            <a href="https://github.com/vishalchandravanshi16-art" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/vishal-singh-019457370/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
+            <h2 class="section-title text-center">&lt; Initialize Contact /&gt;</h2>
+            <div class="contact-grid">
+                <div class="cyber-card">
+                    <h3>Contact Information</h3>
+                    <p class="contact-sub">Reach out for collaborations, project inquiries, or technical discussion.</p>
+                    <div class="contact-detail"><i class="fas fa-envelope"></i> vishalchandravanshi16@gmail.com</div>
+                    <div class="contact-detail"><i class="fas fa-phone"></i> +91-9693088257</div>
+                    <div class="contact-detail"><i class="fas fa-location-dot"></i> Ara (Bhojpur), Bihar, India</div>
                 </div>
 
-                <!-- RIGHT CARD: CONTACT FORM -->
-                <div class="contact-form-card">
-                    <form id="portfolioContactForm" action="https://formspree.io/f/mykrakek" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <div class="input-wrapper">
-                                <i class="far fa-user"></i>
-                                <input type="text" id="name" name="name" placeholder="John Doe" required>
-                            </div>
+                <div class="cyber-card">
+                    <form action="https://formspree.io/f/mykrakek" method="POST" class="cyber-form">
+                        <div class="input-field">
+                            <input type="text" name="name" required placeholder="Your Name">
                         </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <div class="input-wrapper">
-                                <i class="far fa-envelope"></i>
-                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                            </div>
+                        <div class="input-field">
+                            <input type="email" name="email" required placeholder="Your Email">
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <div class="input-wrapper">
-                                <i class="far fa-comment-dots"></i>
-                                <textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
-                            </div>
+                        <div class="input-field">
+                            <textarea name="message" rows="4" required placeholder="Your Message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <button type="submit" class="btn btn-primary btn-full"><i class="fas fa-paper-plane"></i> Transmit Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- JS Loader -->
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('welcome-loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+                setTimeout(() => loader.style.display = 'none', 600);
+            }, 1200);
+        });
+    </script>
 </body>
 </html>
