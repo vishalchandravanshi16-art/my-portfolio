@@ -1,344 +1,115 @@
-/* Core Variables Matrix Rules */
-:root {
-    --bg-dark: #0b111e;
-    --bg-card: #111a2e;
-    --text-main: #f3f4f6;
-    --text-muted: #9ca3af;
-    --accent-blue: #3b82f6;
-    --accent-glow: rgba(59, 130, 246, 0.2);
-    --border-color: #1e293b;
-}
-
+/* ==========================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
 }
 
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    overflow-x: hidden;
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* मोबाइल स्क्रीन पर साइड स्क्रॉल रोकने के लिए */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    scroll-behavior: smooth;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================
+   2. CONTAINER & LAYOUT FLEXIBILITY
+   ========================================== */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Navbar Design Blueprint */
-.navbar {
-    background: rgba(11, 17, 30, 0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 15px 0;
-}
-.nav-container {
+.row, .grid, .flex-container {
     display: flex;
+    flex-wrap: wrap; /* मोबाइल में एलिमेंट्स को नीचे लाने के लिए */
     justify-content: space-between;
     align-items: center;
 }
-.nav-logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: #fff;
-    text-decoration: none;
-}
-.nav-logo span { color: var(--accent-blue); }
-.nav-menu { display: flex; list-style: none; gap: 30px; }
-.nav-link {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-.nav-link.active, .nav-link:hover { color: #fff; }
-.download-btn {
-    background: var(--accent-blue);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    box-shadow: 0 4px 15px var(--accent-glow);
-}
 
-/* Hero UI Frame */
-.hero-section { padding: 80px 0; }
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: center;
-    width: 100%;
-}
-.subtitle { color: var(--text-muted); font-size: 20px; }
-.hero-title { font-size: 56px; font-weight: 800; line-height: 1.1; margin: 10px 0; }
-.hero-title span { color: var(--accent-blue); }
-.hero-tagline { color: var(--accent-blue); font-size: 22px; font-weight: 600; margin-bottom: 20px; }
-.hero-desc { color: var(--text-muted); line-height: 1.6; font-size: 16px; margin-bottom: 30px; }
-.hero-buttons { display: flex; gap: 20px; margin-bottom: 30px; }
-.btn {
-    padding: 12px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s;
-}
-.btn-primary { background: var(--accent-blue); color: #fff; }
-.btn-outline { border: 1px solid var(--border-color); color: #fff; background: transparent; }
-.btn:hover { transform: translateY(-3px); }
-.social-links a { color: var(--text-muted); font-size: 20px; margin-right: 20px; transition: color 0.3s; }
-.social-links a:hover { color: var(--accent-blue); }
+/* ==========================================
+   3. RESPONSIVE MEDIA QUERIES
+   ========================================== */
 
-/* Glowing Circle Photo Frame */
-/* Glowing Circle Photo Frame */
-.hero-image-box { 
-    display: flex; 
-    justify-content: flex-end; 
-    align-items: center;
-    width: 100%;
-    min-height: 400px;
-}
-.glowing-circle {
-    width: 380px;
-    height: 380px;
-    border-radius: 50%;
-    background: linear-gradient(145deg, #111a2e, #0b111e);
-    border: 2px solid var(--accent-blue);
-    box-shadow: 0 0 40px var(--accent-glow);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.glowing-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Metrics Section Layout */
-.metrics-section { padding: 40px 0; }
-.metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-.metric-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.icon-blue { font-size: 32px; color: var(--accent-blue); }
-.metric-info h3 { font-size: 24px; font-weight: 700; }
-.metric-info p { color: var(--text-muted); font-size: 14px; }
-
-/* Dual-Grid Logic */
-.main-info-section { padding: 60px 0; }
-.core-grid {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 40px;
-}
-.about-summary-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 30px;
-    border-radius: 16px;
-}
-.card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-.card-header i { font-size: 28px; color: var(--accent-blue); }
-.info-list { list-style: none; margin: 20px 0; }
-.info-list li { margin: 12px 0; color: var(--text-muted); }
-.info-list li i { color: var(--accent-blue); margin-right: 10px; width: 20px; }
-.info-list li span { color: #fff; font-weight: 600; }
-.small-btn { font-size: 14px; padding: 10px 20px; width: 100%; justify-content: center; margin-top: 10px; }
-
-/* What I Do Design */
-.section-heading { font-size: 28px; margin-bottom: 30px; font-weight: 700; }
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-.service-item {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    border-radius: 12px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-.service-item i { font-size: 24px; color: var(--accent-blue); background: rgba(59, 130, 246, 0.1); padding: 15px; border-radius: 50%; }
-.service-item h4 { margin-bottom: 8px; font-size: 18px; }
-.service-item p { color: var(--text-muted); font-size: 14px; line-height: 1.5; }
-
-/* Footer Specifications */
-.main-footer {
-    border-top: 1px solid var(--border-color);
-    padding: 30px 0;
-    margin-top: 60px;
-    color: var(--text-muted);
-    font-size: 14px;
-}
-.footer-flex { display: flex; justify-content: space-between; align-items: center; }
-.footer-links a { color: var(--text-muted); text-decoration: none; margin-left: 20px; }
-.footer-links a:hover { color: var(--accent-blue); }
-
-/* Responsive Adaptations */
-@media (max-width: 992px) {
-    .hero-grid, .core-grid { grid-template-columns: 1fr; }
-    .metrics-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero-image-box { 
-        order: -1; 
-        justify-content: center; 
-        min-height: auto;
-        margin-bottom: 30px;
+/* Tablet Screens (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        padding: 0 15px;
     }
 }
-@media (max-width: 576px) {
-    .metrics-grid, .services-grid { grid-template-columns: 1fr; }
-    .hero-title { font-size: 40px; }
-    .footer-flex { flex-direction: column; gap: 15px; text-align: center; }
-}
-/* ================= Skills Section Style Engines (Fixed Size) ================= */
-.skills-section { 
-    padding: 60px 0; 
-}
-.skills-grid-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.skill-icon-card {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    min-width: 130px;
-    justify-content: center;
-}
-.skill-icon-card:hover { 
-    transform: translateY(-3px);
-    border-color: var(--accent-blue);
-    box-shadow: 0 4px 15px var(--accent-glow);
-}
-.skill-icon-card img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-.skill-icon-card span {
-    font-size: 14px;
-    color: var(--text-main);
-    font-weight: 500;
+
+/* Mobile Screens (768px and below) */
+@media screen and (max-width: 768px) {
+    /* लेआउट को वर्टिकल (एक के नीचे एक) बनाएँ */
+    .row, .grid, .flex-container, .hero-section, .about-section, .projects-grid {
+        flex-direction: column !important;
+        display: flex !important;
+        text-align: center !important;
+    }
+
+    /* सभी कॉलम्स की चौड़ाई 100% करें */
+    .col, .col-6, .col-4, .card, .project-card {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    /* फॉन्ट साइज़ मोबाइल के हिसाब से एडजस्ट करें */
+    h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    h3 {
+        font-size: 1.4rem !important;
+    }
+
+    p, span, a {
+        font-size: 0.95rem !important;
+    }
+
+    /* नेविगेशन बार एडजस्टमेंट */
+    nav, .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    /* बटन्स को मोबाइल में सही लुक देना */
+    .btn, button {
+        width: 100%;
+        max-width: 280px;
+        margin: 10px auto;
+        display: inline-block;
+    }
 }
 
-/* ================= Featured Projects Style Engine ================= */
-.featured-projects-section { padding: 60px 0; }
-.projects-showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 30px;
-}
-.project-premium-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.project-premium-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
-    border-color: rgba(59, 130, 246, 0.4);
-}
-.project-img-wrapper {
-    position: relative;
-    height: 180px;
-    overflow: hidden;
-}
-.project-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.external-link-icon {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: rgba(11, 17, 30, 0.8);
-    border: 1px solid var(--border-color);
-    color: #fff;
-    width: 35px;
-    height: 35px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 14px;
-}
-.project-details { padding: 20px; }
-.project-details h4 { font-size: 18px; margin-bottom: 8px; font-weight: 600; }
-.project-details p { color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 15px; }
-.project-tags { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
-.project-tags span {
-    font-size: 12px;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-weight: 600;
-}
-.tag { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
-.tag-html { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
-.tag-css { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
-.tag-js { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
-.project-footer {
-    border-top: 1px solid var(--border-color);
-    padding-top: 15px;
-    display: flex;
-    justify-content: flex-end;
-}
-.live-demo {
-    color: var(--accent-blue);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-.text-center { text-align: center; }
+/* Small Mobile Screens (480px and below) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
 
-@media (max-width: 992px) {
-    .projects-showcase-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 768px) {
-    .projects-showcase-grid { grid-template-columns: 1fr; }
+    .container {
+        padding: 0 10px;
+    }
 }
