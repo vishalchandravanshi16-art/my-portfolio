@@ -8,44 +8,14 @@
  */
 const PROJECTS_DATA = [
     {
-        id: "physics-sandbox",
-        title: "Kinetic Physics Sandbox Engine",
-        subtitle: "Educational Interactive Tool",
-        category: "academic",
-        tags: ["HTML5 Canvas", "JavaScript", "Kinetic Physics", "UI Customization"],
-        description: "A complete 2D vector physics engine built using HTML5 Canvas. Designed to help science students visualize wave patterns, reflection thresholds, superposition parameters, and real-time coefficient adjustments seamlessly.",
-        githubUrl: "https://github.com",
-        liveUrl: "#"
-    },
-    {
-        id: "retail-tracker",
-        title: "Local Retail Inventory Platform",
-        subtitle: "Commercial Management System",
+        id: "durga-puja-samiti",
+        title: "आदिशक्ति नवयुवक संघ दुर्गा पूजा समिति",
+        subtitle: "Patarihan, Sahar, Bhojpur - Cultural Web Portal",
         category: "development",
-        tags: ["JavaScript", "JSON Data Models", "CSS Variables", "Local Storage"],
-        description: "A high-performance stock management app engineered for small retail stores. Features modular JSON data structures, active threshold notifications for bulk stock monitoring, and fluid multi-tier item sorting.",
-        githubUrl: "https://github.com",
-        liveUrl: "#"
-    },
-    {
-        id: "wave-simulation",
-        title: "Huygens Wavelet Modeler",
-        subtitle: "Scientific Visualization Rig",
-        category: "academic",
-        tags: ["Canvas API", "Wave Optics", "Vector Physics", "Math.js Integration"],
-        description: "An interactive application modeling secondary wavelets and wavefront propagation according to Huygens' Principle. Provides accurate spatial mapping of constructive and destructive interference patterns.",
-        githubUrl: "https://github.com",
-        liveUrl: "#"
-    },
-    {
-        id: "vlog-assets",
-        title: "Creative Vlog Hub & Brand Site",
-        subtitle: "Media Production Asset Portfolio",
-        category: "creative",
-        tags: ["Responsive Grid", "CSS Animations", "Asset Engineering", "UX Optimization"],
-        description: "A highly visual front-end showcase engineered for multimedia content groups. Incorporates adaptive fluid grids and layout models customized for tracking content streams and video asset logs.",
-        githubUrl: "https://github.com",
-        liveUrl: "#"
+        tags: ["Web App", "Festive Portal", "HTML5", "CSS3", "JavaScript"],
+        description: "A community web application built for Aadishakti Navyuvak Sangh Durga Puja Samiti, Patarihan (Sahar, Bhojpur)[cite: 4]. Features financial transparency reports, committee details, historical milestones, photo gallery, and event schedules[cite: 4].",
+        githubUrl: "https://github.com/vishalchandravanshi16",
+        liveUrl: "https://durga-puja-app-2026.onrender.com"
     }
 ];
 
@@ -62,8 +32,8 @@ function renderProjectsGrid(activeCategory) {
     if (!projectsGrid) return;
 
     const filteredProjects = activeCategory === 'all' 
-        ? PROJECTS_DATA 
-        : PROJECTS_DATA.filter(project => project.category === activeCategory);
+      ? PROJECTS_DATA 
+      : PROJECTS_DATA.filter(project => project.category === activeCategory);
 
     if (filteredProjects.length === 0) {
         projectsGrid.innerHTML = `<p class="no-projects text-center">No projects matched the active tracking parameters.</p>`;
@@ -84,7 +54,7 @@ function renderProjectsGrid(activeCategory) {
                     <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
                         <i class="fab fa-github"></i> Source
                     </a>
-                    <a href="${project.liveUrl}" class="btn btn-primary btn-sm">
+                    <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                         <i class="fas fa-external-link-alt"></i> Demo
                     </a>
                 </div>
